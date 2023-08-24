@@ -23,9 +23,15 @@ const { MONGO_URI } = require('./config');
     }
 })();
 
+// manejo de rutas y creación de servidor estático.
 app.use(express.json());
+
+// creación, manejo y análisis de cookies con js.
 app.use(cookieParser());
+
+// seguridad en las interacciones entre diferentes sitios webs y prevencion de ataques no autorizados.
 app.use(cors());
+
 // Rutas Front-End
 app.use('/', express.static(path.resolve(__dirname, 'views', 'home')));
 app.use('/signup', express.static(path.resolve(__dirname, 'views', 'signup')));
@@ -36,6 +42,7 @@ app.use('/styles', express.static(path.resolve(__dirname, 'views', 'styles')));
 app.use('/images', express.static(path.resolve(__dirname, 'img')));
 app.use('/components', express.static(path.resolve(__dirname, 'views', 'components')));
 
+// muestra mensajes en consola de los CRUD.
 app.use(morgan('tiny'));
 
 // Rutas Back-End

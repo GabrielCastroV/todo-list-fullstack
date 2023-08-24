@@ -100,6 +100,4 @@ form.addEventListener('submit', async e => {
         formBtn.classList.remove('hidden');
         formBtn.disabled = true;
     }
-
-
 });

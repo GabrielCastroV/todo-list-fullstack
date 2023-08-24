@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const input = document.querySelector('input');
 const ul = document.querySelector('ul');
 const invalidCheck = document.querySelector('.invalid-check');

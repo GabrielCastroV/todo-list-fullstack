@@ -1,5 +1,4 @@
 const todosRouter = require('express').Router();
-const User = require('../models/user');
 const Todo = require('../models/todo');
 
 todosRouter.get('/', async (request, response) => {
@@ -28,7 +27,6 @@ todosRouter.delete('/:id', async (request, response) => {
     return response.sendStatus(204);
 });
 todosRouter.patch('/:id', async (request, response) => {
-    const user = request.user;
     const { checked } = request.body;
     await Todo.findByIdAndUpdate(request.params.id, { checked });
     return response.sendStatus(200);
