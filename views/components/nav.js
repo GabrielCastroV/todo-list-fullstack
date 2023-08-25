@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 const navbar = document.querySelector('#nav');
+const closeApp = document.querySelector('#closed');
 
 
 const createNavHome = () => {
@@ -104,6 +105,14 @@ const createNavTodos = () => {
     </div>
     `;
 };
+const closed = () => {
+    closeApp.innerHTML = `
+    <div class = "fixed bg-slate-300 dark:bg-slate-800 top-16 left-0 right-0 h-screen w-full mx-auto flex items-center flex-col">
+        <p class="font-bold text-slate-950 dark:text-slate-50 mx-auto mt-16">Sesión cerrada, vuelve pronto.</p>
+		<img src="/images/logout.svg" class="top-16 h-screen w-5/6 md:w-3/6 lg:w-1/3 mx-auto right-0 left-0" alt="imagen">
+    </div>
+    `;
+};
 if (window.location.pathname === '/') {
     createNavHome();
 } else if (window.location.pathname === '/signup/') {
@@ -140,6 +149,7 @@ const closeBtnMobile = navbar.children[0].children[3].children[0];
 
 closeBtnDesktop.addEventListener('click', async () => {
     try {
+        closed();
         await axios.get('/api/logout');
         window.location.pathname = '/login';
     } catch (error) {
@@ -148,6 +158,7 @@ closeBtnDesktop.addEventListener('click', async () => {
 });
 closeBtnMobile.addEventListener('click', async () => {
     try {
+        closed();
         await axios.get('/api/logout');
         window.location.pathname = '/login';
     } catch (error) {
