@@ -109,6 +109,7 @@ const closed = () => {
     closeApp.innerHTML = `
     <div class = "fixed bg-slate-300 dark:bg-slate-800 top-16 left-0 right-0 h-screen w-full mx-auto flex items-center flex-col">
         <p class="font-bold text-slate-950 dark:text-slate-50 mx-auto mt-16">Sesión cerrada, vuelve pronto.</p>
+        <a href="/" class="hover:underline text-slate-950 dark:text-slate-50 mx-auto mt-16">Volver al inicio</a>
 		<img src="/images/logout.svg" class="top-16 h-screen w-5/6 md:w-3/6 lg:w-1/3 mx-auto right-0 left-0" alt="imagen">
     </div>
     `;
