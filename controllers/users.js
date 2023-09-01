@@ -252,22 +252,16 @@ usersRouter.post('/', async (request, response) => {
                                                 </td>
                                             </tr>
         
-                                            <tr>
-                                                <td align="center" style="font-size:0px;padding:10px 25px;padding-top:30px;padding-bottom:50px;word-break:break-word;">
-        
-                                                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
-                                                        <tr>
-                                                            <td align="center" bgcolor="#2F67F6" role="presentation" style="border:none;border-radius:3px;color:#ffffff;cursor:auto;padding:15px 25px;" valign="middle">
-                                                                <a href = "${PAGE_URL}/verify/${savedUser.id}/${token}" style="background:#2F67F6;color:#ffffff;font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;">
-                                                                    Verificar ahora
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-        
-                                                </td>
-                                            </tr>
-        
+                                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate;">
+                                                <tr>
+                                                    <td align="center" bgcolor="#2F67F6" role="presentation" style="border: none; border-radius: 3px; color: #ffffff;">
+                                                        <a href="${PAGE_URL}/verify/${savedUser.id}/${token}" style="display: block; background: #2F67F6; color: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: normal; text-align: center; text-decoration: none; text-transform: none; padding: 15px 25px;">
+                                                            Verificar ahora
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        
                                             <tr>
                                                 <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
         
@@ -630,22 +624,16 @@ usersRouter.patch('/:id/:token', async (request, response) => {
             
                                                     </td>
                                                 </tr>
-            
+
+                                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate;">
                                                 <tr>
-                                                    <td align="center" style="font-size:0px;padding:10px 25px;padding-top:30px;padding-bottom:50px;word-break:break-word;">
-            
-                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
-                                                            <tr>
-                                                                <td align="center" bgcolor="#2F67F6" role="presentation" style="border:none;border-radius:3px;color:#ffffff;cursor:auto;padding:15px 25px;" valign="middle">
-                                                                    <a href = "${PAGE_URL}/verify/${id}/${token}" style="background:#2F67F6;color:#ffffff;font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;">
-                                                                        Verificar ahora
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-            
+                                                    <td align="center" bgcolor="#2F67F6" role="presentation" style="border: none; border-radius: 3px; color: #ffffff;">
+                                                        <a href="${PAGE_URL}/verify/${id}/${token}" style="display: block; background: #2F67F6; color: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: normal; text-align: center; text-decoration: none; text-transform: none; padding: 15px 25px;">
+                                                            Verificar ahora
+                                                        </a>
                                                     </td>
                                                 </tr>
+                                            </table>
             
                                                 <tr>
                                                     <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
